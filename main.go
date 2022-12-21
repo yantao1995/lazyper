@@ -26,15 +26,11 @@ func main() {
 	app.UseGlobal(recover.New())
 	// 配置上面配置到所有url
 	mvc.New(app.Party("/"))
-
 	// 为所有handle配置Done
 	app.SetExecutionRules(iris.ExecutionRules{
 		Done: iris.ExecutionOptions{Force: true},
 	})
 	app.Done(middleware.MiddleDone)
-
 	routers.Configure(app)
-
-	addr := fmt.Sprintf(":%d", common.ListenPort)
-	app.Run(iris.Addr(addr))
+	app.Run(iris.Addr(fmt.Sprintf(":%d", common.ListenPort)))
 }
