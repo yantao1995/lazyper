@@ -7,6 +7,11 @@ func TapEnter() {
 	robotgo.KeyTap("enter")
 }
 
+//按回车
+func TapSpace() {
+	robotgo.KeyTap("space")
+}
+
 //方向上
 func TapUp() {
 	robotgo.KeyTap("up")

@@ -8,5 +8,5 @@ import (
 
 // 所有handle的Done
 func MiddleDone(ctx iris.Context) {
-	fmt.Println(ctx.Request().URL.Path)
+	fmt.Println("收到请求:", ctx.Request().URL)
 }

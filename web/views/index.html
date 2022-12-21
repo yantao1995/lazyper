@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link type="text/css" rel="stylesheet" href="index.css" />
+		<script src="jquery2.2.4.js"></script>
+		<script src="index.js"></script>
+		<title>遥控器</title>
+	</head>
+	<body>
+		<div id="host">连接地址:{{.host}}</div>
+		<hr />
+		<button id="volume1">静音</button>
+		<button id="volume3">音量-</button>
+		<button id="volume2">音量+</button>
+		<hr />
+		<button id="keyboard1">↑</button>
+		<button id="keyboard2">↓</button>
+		<button id="keyboard3">←</button>
+		<button id="keyboard4">→</button>
+		<hr />
+		<button id="keyboard8">空格</button>
+		<button id="keyboard5">回车</button>
+		<hr />
+		<input id="keyboard6" placeholder="输入键的名称"/>
+		<button id="keyboard7">任意键按下</button>
+		<hr />
+		<input id="sys1" placeholder="输入时间" onkeyup="numCheck($(this))" />秒后
+		<button id="sys2">定时关机</button>
+		<button id="sys3">取消关机</button>
+		<hr />
+	</body>
+</html>
