@@ -21,8 +21,8 @@ func main() {
 		middleware.MiddleDone(ctx)
 		return
 	})
-	app.RegisterView(iris.HTML("./web/views", ".html"))
-	app.HandleDir("./", "./web/views")
+	// app.RegisterView(iris.HTML("./web/views", ".html"))
+	// app.HandleDir("./", "./web/views")
 	app.UseGlobal(recover.New())
 	// 配置上面配置到所有url
 	mvc.New(app.Party("/"))

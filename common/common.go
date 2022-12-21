@@ -2,7 +2,9 @@ package common
 
 import (
 	"fmt"
+	"lazyper/web/views"
 	"net"
+	"strings"
 )
 
 func init() {
@@ -20,7 +22,7 @@ func init() {
 			}
 		}
 	}
-
+	views.HTML = strings.ReplaceAll(views.HTML, "连接地址:", "连接地址:"+Localhost)
 }
 
 var (

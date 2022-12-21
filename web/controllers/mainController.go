@@ -2,13 +2,12 @@ package controllers
 
 import (
 	"fmt"
-	"lazyper/common"
 	"lazyper/sys"
+	"lazyper/web/views"
 	"strconv"
 	"time"
 
 	"github.com/kataras/iris/v12"
-	"github.com/kataras/iris/v12/mvc"
 )
 
 type MainController struct {
@@ -16,13 +15,8 @@ type MainController struct {
 }
 
 //主页
-func (c *MainController) Get() mvc.Result {
-	return mvc.View{
-		Name: "index.html",
-		Data: map[string]interface{}{
-			"host": common.Localhost,
-		},
-	}
+func (c *MainController) Get() {
+	c.Ctx.WriteString(views.HTML)
 }
 
 //获取请求
