@@ -32,6 +32,11 @@ func TapRight() {
 	robotgo.KeyTap("right")
 }
 
+//Esc
+func TapEsc() {
+	robotgo.KeyTap("esc")
+}
+
 //任意键
 func TapAny(any string) {
 	robotgo.KeyTap(any)

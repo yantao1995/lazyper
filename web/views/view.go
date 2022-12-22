@@ -28,6 +28,7 @@ var HTML = fmt.Sprintf(`
 		<button id="keyboard3">←</button>
 		<button id="keyboard4">→</button>
 		<hr />
+		<button id="keyboard9">Esc</button>
 		<button id="keyboard8">空格</button>
 		<button id="keyboard5">回车</button>
 		<hr />

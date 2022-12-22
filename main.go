@@ -32,5 +32,7 @@ func main() {
 	})
 	app.Done(middleware.MiddleDone)
 	routers.Configure(app)
-	app.Run(iris.Addr(fmt.Sprintf(":%d", common.ListenPort)))
+	app.Listen(fmt.Sprintf(":%d", common.ListenPort), iris.WithConfiguration(iris.Configuration{
+		DisableStartupLog: true,
+	}))
 }

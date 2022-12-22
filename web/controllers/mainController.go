@@ -51,6 +51,8 @@ func handle(btn string, params ...string) {
 		sys.TapAny(params[0])
 	case "keyboard8":
 		sys.TapSpace()
+	case "keyboard9":
+		sys.TapEsc()
 	case "sys2":
 		iInt, err := strconv.Atoi(params[1])
 		if err != nil || iInt < 0 {
